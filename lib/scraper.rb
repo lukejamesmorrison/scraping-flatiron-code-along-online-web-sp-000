@@ -12,9 +12,9 @@ class Scraper
   def get_courses
     doc = get_page
     doc.css('.post').each do |course|
-      puts title = course.search('h2').text
-      puts schedule = course.search('em.date').text
-      puts description = course.search('p').text
+      title = course.search('h2').text
+      schedule = course.search('em.date').text
+      description = course.search('p').text
       Course.new(title, schedule, description)
     end
   end
