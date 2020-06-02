@@ -14,7 +14,7 @@ class Scraper
   end
 
   def make_courses
-    courses.each do |course|
+    get_courses.each do |course|
       title = course.search('h2').text
       schedule = course.search('em.date').text
       description = course.search('p').text
