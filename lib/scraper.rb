@@ -15,10 +15,10 @@ class Scraper
 
   def make_courses
     get_courses.each do |course|
-      title = course.search('h2').text
-      schedule = course.search('em.date').text
-      description = course.search('p').text
-      Course.new(title, schedule, description)
+      course = Course.new
+      course.title = course.search('h2').text
+      course.schedule = course.search('em.date').text
+      course.description = course.search('p').text
     end
   end
 
