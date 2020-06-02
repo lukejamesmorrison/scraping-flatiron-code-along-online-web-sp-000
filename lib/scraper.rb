@@ -13,7 +13,7 @@ class Scraper
     get_page.css('.post')
   end
 
-  def make_courses(courses)
+  def make_courses
     courses.each do |course|
       title = course.search('h2').text
       schedule = course.search('em.date').text
