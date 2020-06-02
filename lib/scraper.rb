@@ -11,7 +11,9 @@ class Scraper
 
   def get_courses
     doc = get_page
-    puts doc.css('.post')
+    doc.css('.post').each do |course|
+      
+    end
   end
 
   def print_courses
