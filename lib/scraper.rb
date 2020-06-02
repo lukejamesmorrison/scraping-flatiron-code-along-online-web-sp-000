@@ -11,7 +11,7 @@ class Scraper
 
   def get_courses
     puts doc = get_page
-    # puts doc.css('post')
+    puts doc.css('post')
   end
 
   def print_courses
