@@ -15,7 +15,7 @@ class Scraper
       puts title = course.search('h2').text
       puts schedule = course.search('em.date').text
       puts description = course.search('p').text
-      # Course.new()
+      Course.new(title, schedule, description)
     end
   end
 
