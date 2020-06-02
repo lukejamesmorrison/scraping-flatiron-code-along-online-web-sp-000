@@ -14,6 +14,7 @@ class Scraper
     doc.css('.post').each do |course|
       puts title = course.search('h2').text
       puts schedule = course.search('em.date').text
+      puts description = course.search('p').text
       # Course.new()
     end
   end
