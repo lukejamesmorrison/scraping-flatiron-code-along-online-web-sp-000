@@ -10,8 +10,8 @@ class Scraper
   end
 
   def get_courses
-    doc = get_page
-    puts doc.css('post')
+    puts doc = get_page
+    # puts doc.css('post')
   end
 
   def print_courses
