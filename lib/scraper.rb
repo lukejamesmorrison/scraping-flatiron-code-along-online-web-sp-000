@@ -10,16 +10,16 @@ class Scraper
   end
 
   def get_courses
-    doc = get_page
-    doc.css('.post').each do |course|
+    get_page.css('.post')
+  end
+
+  def make_courses(courses)
+    courses.each do |course|
       title = course.search('h2').text
       schedule = course.search('em.date').text
       description = course.search('p').text
       Course.new(title, schedule, description)
     end
-  end
-
-  def make_courses(courses)
   end
 
   def print_courses
