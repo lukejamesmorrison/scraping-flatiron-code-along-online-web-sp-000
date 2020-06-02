@@ -6,6 +6,7 @@ class Course
   @@all = []
 
   def initialize
+    @@all << seld
   end
 
   def self.all
